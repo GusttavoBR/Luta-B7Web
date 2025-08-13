@@ -1,0 +1,32 @@
+body {
+    background-color: #212121;
+    color: #E7E7E7;
+    padding: 20px;
+}
+
+.fightarea {
+    display: flex;
+    gap: 20px
+}
+
+#char, #mosnter {
+    flex: 1;
+}
+
+.lifebar {
+    height: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.lifebar .bar {
+    height: inherit;
+    background-color: #f00;
+    border-radius: 5px;
+}
+
+.log {
+    border: 1px dotted #999;
+    height: 200px;
+    overflow-y: scroll;
+}

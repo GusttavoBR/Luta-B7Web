@@ -1,0 +1,89 @@
+/* Reset de margens, paddings e box-sizing */
+*,
+*::before,
+*::after {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: border-box;
+}
+
+/* Remove estilos padrão de links */
+a {
+    text-decoration: none;
+    color          : inherit;
+}
+
+/* Remove estilos de listas */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Remove estilos padrão de botões e inputs */
+button,
+input,
+select,
+textarea {
+    font      : inherit;
+    color     : inherit;
+    border    : none;
+    background: none;
+    outline   : none;
+}
+
+/* Garante que botões mostrem cursor */
+button {
+    cursor: pointer;
+}
+
+/* Remove bordas em imagens */
+img {
+    max-width: 100%;
+    display  : block;
+    height   : auto;
+    border   : 0;
+}
+
+/* Remove sublinhado automático de links visitados e afins */
+a:visited,
+a:focus,
+a:active {
+    text-decoration: none;
+}
+
+/* Define base para html e body */
+html {
+    scroll-behavior       : smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+body {
+    min-height      : 100vh;
+    line-height     : 1.5;
+    font-family     : system-ui, sans-serif;
+    background-color: #fff;
+    color           : #000;
+    text-rendering  : optimizeSpeed;
+}
+
+/* Tabela sem espaçamentos extras */
+table {
+    border-collapse: collapse;
+    border-spacing : 0;
+}
+
+/* Elementos HTML5 que podem ser usados como bloco */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section,
+summary {
+    display: block;
+}
+
