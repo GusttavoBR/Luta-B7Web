@@ -90,7 +90,12 @@ class Stage {
 
         doAttack(attacking, attacked) {
             if(attacking.life === 0 || attacked.life === 0) {
-                this.log.addMessage(`Atacando cachorro morto`)
+                if (attacking.life === 0) {
+                    this.log.addMessage(`${attacking.name} está morto`)
+                } else {
+                    this.log.addMessage(`${attacked.name}Atacando cachorro morto`)
+                }
+                
                 return
             }
 
