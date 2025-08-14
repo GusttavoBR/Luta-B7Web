@@ -9,7 +9,7 @@ let Bmonster = new BigMonster()
 
 const stage = new Stage(
     charSourcer,
-    charKnight,
+    Bmonster,
     document.querySelector('#char'),
     document.querySelector('#monster'),
     log

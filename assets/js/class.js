@@ -77,15 +77,32 @@ class Stage {
 
         update() {
             // Fighter 1
-            this.fighter1E1.querySelector('.name').innerHTML = `${this.fighter1.name} - HP ${this.fighter1.life}`
+            this.fighter1E1.querySelector('.name').innerHTML = `${this.fighter1.name} - HP ${this.fighter1.life.toFixed(2)}`;
             let f1Pct = (this.fighter1.life / this.fighter1.maxLife) * 100;
-            this.fighter1E1.querySelector('.bar').style.width = `${f1Pct.toFixed(2)}%`;
+            let bar = this.fighter1E1.querySelector('.bar');
+            // Remove classes antigas
+            bar.classList.remove('full', 'half');
+            // Aplica classe conforme a porcentagem de vida
+            if (f1Pct >= 80) {
+                bar.classList.add('full');
+            } else if (f1Pct >= 40) {
+                bar.classList.add('half');
+            }
+            bar.style.width = `${f1Pct.toFixed(2)}%`;
 
 
-            //Fighter 2
-            this.fighter2E1.querySelector('.name').innerHTML = `${this.fighter2.name} - HP ${this.fighter2.life}`
+
+            // Fighter 2
+            this.fighter2E1.querySelector('.name').innerHTML = `${this.fighter2.name} - HP ${this.fighter2.life.toFixed(2)}`;
             let f2Pct = (this.fighter2.life / this.fighter2.maxLife) * 100;
-            this.fighter2E1.querySelector('.bar').style.width = `${f2Pct.toFixed(2)}%`;
+            let bar2 = this.fighter2E1.querySelector('.bar');
+            bar2.classList.remove('full', 'half');
+            if (f2Pct >= 99.9) {
+                bar2.classList.add('full');
+            } else if (f2Pct >= 50) {
+                bar2.classList.add('half');
+            }
+            bar2.style.width = `${f2Pct.toFixed(2)}%`;
         }
 
         doAttack(attacking, attacked) {

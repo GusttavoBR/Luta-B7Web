@@ -25,6 +25,17 @@ body {
     border-radius: 5px;
 }
 
+.full {
+    height: inherit;
+    background-color: #0f0 !important;
+    border-radius: 5px;
+}
+.half {
+    height: inherit;
+    background-color: rgb(255, 225, 0) !important;
+    border-radius: 5px;
+}
+
 .log {
     border: 1px dotted #999;
     min-height: 200px;
